@@ -1,0 +1,141 @@
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f5f7fa;
+  color: #333;
+  margin: 0;
+  padding: 0 1rem;
+}
+h1, h2 {
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+/* Header */
+
+h1 {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  font-weight: 700;
+}
+nav a {
+  color: #ecf0f1;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #1abc9c;
+}
+
+/* Form section */
+.form-section {
+  background: white;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  border-radius: 8px;
+  max-width: 600px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+form input[type="text"],
+form textarea,
+form select,
+form input[type="date"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+}
+form textarea {
+  resize: vertical;
+  height: 80px;
+}
+form button {
+  background: #1abc9c;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  color: white;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+form button:hover {
+  background: #16a085;
+}
+.btn-cancel {
+  margin-left: 1rem;
+  color: #7f8c8d;
+  text-decoration: none;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+/* Table */
+.task-list {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+thead th {
+  background: #34495e;
+  color: white;
+  padding: 0.8rem;
+  text-align: left;
+}
+tbody td {
+  padding: 0.8rem;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+tr.completed {
+  background: #dff0d8;
+  color: #3c763d;
+  text-decoration: line-through;
+}
+.btn-edit, .btn-delete {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+.btn-edit {
+  background-color: #3498db;
+}
+.btn-edit:hover {
+  background-color: #2980b9;
+}
+.btn-delete {
+  background-color: #e74c3c;
+}
+.btn-delete:hover {
+  background-color: #c0392b;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  color: #888;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}

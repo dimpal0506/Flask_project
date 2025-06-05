@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section id="add-task" class="form-section">
+  <h2>Add New Academic Task</h2>
+  <form action="{{ url_for('add_task') }}" method="POST">
+    <input type="text" name="title" placeholder="Task Title" required />
+    <textarea name="description" placeholder="Task Description (optional)"></textarea>
+    <select name="priority" required>
+      <option value="" disabled selected>Priority</option>
+      <option value="High">High</option>
+      <option value="Medium">Medium</option>
+      <option value="Low">Low</option>
+    </select>
+    <input type="date" name="due_date" required />
+    <button type="submit">Add Task</button>
+  </form>
+</section>
+
+<section class="task-list">
+  <h2>Your Tasks</h2>
+  {% if tasks %}
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Priority</th>
+        <th>Due Date</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for task in tasks %}
+      <tr class="{{ 'completed' if task.completed }}">
+        <td>{{ task.title }}</td>
+        <td>{{ task.description or '—' }}</td>
+        <td>{{ task.priority }}</td>
+        <td>{{ task.due_date.strftime('%Y-%m-%d') }}</td>
+        <td>{{ 'Complete' if task.completed else 'Incomplete' }}</td>
+        <td>
+          <a class="btn-edit" href="{{ url_for('update_task', id=task.id) }}">Edit</a>
+          <a class="btn-delete" href="{{ url_for('delete_task', id=task.id) }}" onclick="return confirm('Delete this task?');">Delete</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p>No tasks added yet. Start by adding a new task above!</p>
+  {% endif %}
+</section>
+{% endblock %}
