@@ -15,7 +15,8 @@ Backend: Python (Flask)
 Database: SQLite
 Templating Engine: Jinja2
 
-![image](https://github.com/user-attachments/assets/45087f86-8cf9-4074-8a49-76345a73b61e)
+![image](https://github.com/user-attachments/assets/a4edba45-9796-49c1-8c4f-be1aaec30552)
+
 
 🖼️ This is the main interface of the **Academic Task Planner** web application. Users can:
 - Add a new academic task with title, description, priority, and due date.
